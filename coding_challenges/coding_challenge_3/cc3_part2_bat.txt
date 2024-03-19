@@ -1,0 +1,2 @@
+echo off
+"C:\Python27\ArcGIS10.8\python.exe" "C:\Users\mmilander\OneDrive - University of Rhode Island\NRS 528\coding_challenge_3\codingchallenge3\cc3_part2.py"
