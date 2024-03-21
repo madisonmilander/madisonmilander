@@ -1,0 +1,292 @@
+Identification_Information:
+  Citation:
+    Citation_Information:
+      Originator: RI Department of Environmental Management
+      Publication_Date: 20150622
+      Title: RI DEM Hiking Trails; hikeTrails15
+      Geospatial_Data_Presentation_Form: vector digital data
+      Publication_Information:
+        Publication_Place: Providence, RI
+        Publisher: RI Department of Environmental Management
+      Other_Citation_Details: Suggested bibliographic reference: RIGIS, 2015. RI DEM Hiking Trails; hikeTrails15. Rhode Island Geographic Information System (RIGIS) Data Distribution System, URL: http://www.rigis.org, Environmental Data Center, University of Rhode Island, Kingston, Rhode Island (last date accessed: 8 June 2015).
+      Online_Linkage: http://www.rigis.org
+      Larger_Work_Citation:
+        Citation_Information:
+          Originator: Rhode Island Geographic Information System (RIGIS) Data Distribution System
+          Publication_Date: 1993
+          Title: Rhode Island Geographic Information System (RIGIS)
+          Online_Linkage: http://www.rigis.org
+  Description:
+    Abstract: Locations of recreational trails in State Parks and Management Areas mapped for informational and planning purposes. Only trails occuring within State of Rhode Island properties are included in these data. All trails on properties owned by land trusts, towns, private organizations, or organizations such as The Nature Conservancy are not included. There are portions of the North South trail included in these data that do not occur on state lands, however for the full North South Trail, please reference the NSTrail15 dataset also on RIGIS.
+    Purpose: General reference for planning purposes and small scale cartographic output. It is important for users to note that this may not be a complete piture of all trails on state-owned land.
+  Time_Period_of_Content:
+    Time_Period_Information:
+      Single_Date/Time:
+        Calendar_Date: 20150608
+    Currentness_Reference: publication date
+  Status:
+    Progress: Complete
+    Maintenance_and_Update_Frequency: none planned
+  Spatial_Domain:
+    Bounding_Coordinates:
+      West_Bounding_Coordinate: -71.810268
+      East_Bounding_Coordinate: -71.134506
+      North_Bounding_Coordinate: 42.012409
+      South_Bounding_Coordinate: 41.146776
+  Keywords:
+    Theme:
+      Theme_Keyword_Thesaurus: ISO 19115 Topic Category
+      Theme_Keyword: transportation
+    Theme:
+      Theme_Keyword_Thesaurus: none
+      Theme_Keyword: hiking
+      Theme_Keyword: open space
+      Theme_Keyword: park
+      Theme_Keyword: management area
+      Theme_Keyword: trail
+    Place:
+      Place_Keyword_Thesaurus: none
+      Place_Keyword: Rhode Island
+      Place_Keyword: New England
+      Place_Keyword: USA
+  Access_Constraints: None.
+  Use_Constraints:
+    This dataset is provided 'as is.’ The producer(s) of this dataset, contributors to this dataset, the Rhode Island Geographic Information System (RIGIS) consortium, the State of Rhode Island, and the University of Rhode Island do not make any warranties of any kind for this dataset, and are not liable for any loss or damage however and whenever caused by any use of this dataset. Please acknowledge both RIGIS and the primary producer(s) of this dataset in any derived products. Versions of the RIGIS logo suitable for both printed and web-based products are available at http://www.rigis.org/logos. 
+    The following disclaimer must appear on all map produced with this dataset:
+    These data were created by RIDEM for informational, planning and guidance use only.  They are meant for use as a general reference, not a legally authoritative source for the location of natural or manmade features.  Proper interpretation of these data may requre the assistance of appropriate professional services. Locations have not been verified by a RI Registered Professional Land Surveyor and are not intended to be used in place of a survey.  RIDEM makes no warranty, express or implied, related to the accuracy, reliability,  completeness, or currentness of this map.
+  Point_of_Contact:
+    Contact_Information:
+      Contact_Organization_Primary:
+        Contact_Organization: State of Rhode Island, Department of Environmental Management
+        Contact_Person: Paul Jordan
+      Contact_Position: Supervising GIS Specialist
+      Contact_Address:
+        Address_Type: mailing and physical address
+        Address: 235 Promenade Street
+        City: Providence
+        State_or_Province: RI
+        Postal_Code: 02908-5767
+        Country: USA
+      Contact_Voice_Telephone: 401-222-2776 x4315
+      Contact_Facsimile_Telephone: 401-222-2069
+      Contact_Electronic_Mail_Address: paul.jordan@dem.ri.us
+      Hours_of_Service: 7:30 am to 3:30 pm
+      Contact_Instructions: e-mail preferred
+Data_Quality_Information:
+  Attribute_Accuracy:
+    Attribute_Accuracy_Report: Not Tested
+  Logical_Consistency_Report: Not tested
+  Completeness_Report: These data are considered complete.
+  Lineage:
+    Process_Step:
+      Process_Description: Trails were mapped with a combination of on the ground GPS and heads-up digitizing over various years of orthophotos.
+      Process_Date: 2015
+      Process_Contact:
+        Contact_Information:
+          Contact_Organization_Primary:
+            Contact_Organization: State of Rhode Island, Department of Environmental Management
+            Contact_Person: Paul Jordan
+          Contact_Position: Supervising GIS Specialist
+          Contact_Address:
+            Address_Type: mailing and physical address
+            Address: 235 Promenade Street
+            City: Providence
+            State_or_Province: RI
+            Postal_Code: 02908-5767
+            Country: USA
+          Contact_Voice_Telephone: 401-222-2776 x4315
+          Contact_Facsimile_Telephone: 401-222-2069
+          Contact_Electronic_Mail_Address: paul.jordan@dem.ri.us
+          Hours_of_Service: 7:30 am to 3:30 pm
+          Contact_Instructions: e-mail preferred
+    Process_Step:
+      Process_Description: New fields added to dataset, including Mgt_Area, Comments, and Length_Mi. Field Calculator was used to populate the Length_Mi field. The Mgt_Area field was populated using the "staCons14" (State Conservation Lands)data that can be found on RIGIS under the Environment & Conservation data category. By utilizing the names of the conservation areas, it was possible to select the trails occuring within these polygons and populate the appropriate management area or state park name. The Universal Access dataset was then merged to the trails dataset. The comments field contains information indicating universal accessibility, trail name or other relevant information. Not all trail names are present in the dataset at this time.
+      Process_Date: 20150608
+      Process_Contact:
+        Contact_Information:
+          Contact_Organization_Primary:
+            Contact_Organization: University of Rhode Island Environmental Data Center
+            Contact_Person: Erica Tefft
+          Contact_Address:
+            Address_Type: mailing and physical
+            Address: 1 Greenhouse Road
+            City: Kingston
+            State_or_Province: RI
+            Postal_Code: 02881
+          Contact_Voice_Telephone: 401-874-5054
+          Contact_Electronic_Mail_Address: erica@edc.uri.edu
+          Contact_Instructions: email preferred.
+    Process_Step:
+      Process_Description: Arcadia trails cleaned up. Original Arcadia trails mapped in 1998 without differential correction. Edited trails in this area to remove "tangles," overshoots, undershoots, dangles and other errors. All trails reviewed to ensure all non-state owned trails removed.
+      Process_Date: 20150622
+      Process_Contact:
+        Contact_Information:
+          Contact_Organization_Primary:
+            Contact_Organization: State of Rhode Island, Department of Environmental Management
+            Contact_Person: Paul Jordan
+          Contact_Position: Supervising GIS Specialist
+          Contact_Address:
+            Address_Type: mailing and physical address
+            Address: 235 Promenade Street
+            City: Providence
+            State_or_Province: RI
+            Postal_Code: 02908-5767
+            Country: USA
+          Contact_Voice_Telephone: 401-222-2776 x4315
+          Contact_Facsimile_Telephone: 401-222-2069
+          Contact_Electronic_Mail_Address: paul.jordan@dem.ri.us
+          Hours_of_Service: 7:30 am to 3:30 pm
+          Contact_Instructions: e-mail preferred
+    Process_Step:
+      Process_Description: Data contributed to RIGIS by the Rhode Island Department of Environmental Management. Metadata were reviewed, corrections made to formatting, RIGIS distribution information added.
+      Process_Date: 20150609
+      Process_Contact:
+        Contact_Information:
+          Contact_Organization_Primary:
+            Contact_Organization: University of Rhode Island Environmental Data Center
+            Contact_Person: Erica Tefft
+          Contact_Address:
+            Address_Type: mailing and physical
+            Address: 1 Greenhouse Road
+            City: Kingston
+            State_or_Province: RI
+            Postal_Code: 02881
+          Contact_Voice_Telephone: 401-874-5054
+          Contact_Electronic_Mail_Address: erica@edc.uri.edu
+          Contact_Instructions: email preferred.
+Spatial_Data_Organization_Information:
+  Direct_Spatial_Reference_Method: Vector
+  Point_and_Vector_Object_Information:
+    SDTS_Terms_Description:
+      SDTS_Point_and_Vector_Object_Type: line
+      Point_and_Vector_Object_Count: 2041
+Spatial_Reference_Information:
+  Horizontal_Coordinate_System_Definition:
+    Planar:
+      Grid_Coordinate_System:
+        Grid_Coordinate_System_Name: State Plane Coordinate System
+        State_Plane_Coordinate_System:
+          SPCS_Zone_Identifier: 3800
+          Transverse_Mercator:
+            Scale_Factor_at_Central_Meridian: 0.999994
+            Longitude_of_Central_Meridian: -71.500000
+            Latitude_of_Projection_Origin: 41.083333
+            False_Easting: 328083.333333
+            False_Northing: 0.000000
+      Planar_Coordinate_Information:
+        Planar_Coordinate_Encoding_Method: coordinate pair
+        Coordinate_Representation:
+          Abscissa_Resolution: 0.000512
+          Ordinate_Resolution: 0.000512
+        Planar_Distance_Units: survey feet
+    Geodetic_Model:
+      Horizontal_Datum_Name: North American Datum of 1983
+      Ellipsoid_Name: Geodetic Reference System 80
+      Semi-major_Axis: 6378137.000000
+      Denominator_of_Flattening_Ratio: 298.257222
+Entity_and_Attribute_Information:
+  Detailed_Description:
+    Entity_Type:
+      Entity_Type_Label: HikeTrails15
+    Attribute:
+      Attribute_Label: OBJECTID
+      Attribute_Definition: Internal feature number.
+      Attribute_Definition_Source: Esri
+      Attribute_Domain_Values:
+        Unrepresentable_Domain: Sequential unique whole numbers that are automatically generated.
+    Attribute:
+      Attribute_Label: Shape
+      Attribute_Definition: Feature geometry.
+      Attribute_Definition_Source: Esri
+      Attribute_Domain_Values:
+        Unrepresentable_Domain: Coordinates defining the features.
+    Attribute:
+      Attribute_Label: Type
+      Attribute_Definition: Type of trail. Indicates if trail occurs on a gravel road, double track or single track (refering to trail width).
+      Attribute_Definition_Source: RI DEM
+      Attribute_Domain_Values:
+        Enumerated_Domain:
+          Enumerated_Domain_Value: Double Track
+          Enumerated_Domain_Value_Definition: Double-wide trail.
+          Enumerated_Domain_Value_Definition_Source: URI EDC
+        Enumerated_Domain:
+          Enumerated_Domain_Value: Gravel Road
+          Enumerated_Domain_Value_Definition: Trail occuring on gravel road.
+          Enumerated_Domain_Value_Definition_Source: URI EDC
+        Enumerated_Domain:
+          Enumerated_Domain_Value: Paved Path
+          Enumerated_Domain_Value_Definition: Trail occuring on paved pathway.
+          Enumerated_Domain_Value_Definition_Source: URI EDC
+        Enumerated_Domain:
+          Enumerated_Domain_Value: Paved Road
+          Enumerated_Domain_Value_Definition: Trail occuring on paved road.
+          Enumerated_Domain_Value_Definition_Source: URI EDC
+        Enumerated_Domain:
+          Enumerated_Domain_Value: Private
+          Enumerated_Domain_Value_Definition: Trail occuring on private property.
+          Enumerated_Domain_Value_Definition_Source: URI EDC
+        Enumerated_Domain:
+          Enumerated_Domain_Value: Single track
+          Enumerated_Domain_Value_Definition: Single width track.
+          Enumerated_Domain_Value_Definition_Source: URI EDC
+    Attribute:
+      Attribute_Label: Comments
+      Attribute_Definition: Additional comments about trail, could included handicapped accessible, or refer to the owner of the land on which trails occur.
+      Attribute_Definition_Source: RI DEM
+    Attribute:
+      Attribute_Label: Length_Mi
+      Attribute_Definition: Trail length in miles.
+      Attribute_Definition_Source: RI DEM
+    Attribute:
+      Attribute_Label: Shape_Length
+      Attribute_Definition: Trail length in feet.
+      Attribute_Definition_Source: RI DEM
+Distribution_Information:
+  Distributor:
+    Contact_Information:
+      Contact_Organization_Primary:
+        Contact_Organization: University of Rhode Island Environmental Data Center
+        Contact_Person: Erica Tefft
+      Contact_Address:
+        Address_Type: mailing and physical
+        Address: 1 Greenhouse Road
+        City: Kingston
+        State_or_Province: RI
+        Postal_Code: 02881
+      Contact_Voice_Telephone: 401-874-5054
+      Contact_Electronic_Mail_Address: erica@edc.uri.edu
+      Contact_Instructions: email preferred
+  Distribution_Liability: This dataset is provided 'as is.'  The producer(s) of this dataset, contributors to this dataset, the Rhode Island Geographic Information System (RIGIS) consortium, the State of Rhode Island, and the University of Rhode Island do not make any warranties of any kind for this dataset, and are not liable for any loss or damage however and whenever caused by any use of this dataset.
+  Standard_Order_Process:
+    Digital_Form:
+      Digital_Transfer_Information:
+        Format_Name: Esri shapefile
+        File_Decompression_Technique: ZIP
+      Digital_Transfer_Option:
+        Online_Option:
+          Computer_Contact_Information:
+            Network_Address:
+              Network_Resource_Name: http://www.rigis.org
+    Fees: No fee for downloading directly from the RIGIS Data Distribution System located at http://www.edc.uri.edu/rigis.
+Metadata_Reference_Information:
+  Metadata_Date: 20150622
+  Metadata_Contact:
+    Contact_Information:
+      Contact_Organization_Primary:
+        Contact_Organization: State of Rhode Island, Department of Environmental Management
+        Contact_Person: Paul Jordan
+      Contact_Position: Supervising GIS Specialist
+      Contact_Address:
+        Address_Type: mailing and physical address
+        Address: 235 Promenade Street
+        City: Providence
+        State_or_Province: RI
+        Postal_Code: 02908-5767
+        Country: USA
+      Contact_Voice_Telephone: 401-222-2776 x4315
+      Contact_Facsimile_Telephone: 401-222-2069
+      Contact_Electronic_Mail_Address: paul.jordan@dem.ri.us
+      Hours_of_Service: 7:30 am to 3:30 pm
+      Contact_Instructions: e-mail preferred
+  Metadata_Standard_Name: FGDC Content Standard for Digital Geospatial Metadata
+  Metadata_Standard_Version: FGDC-STD-001-1998
