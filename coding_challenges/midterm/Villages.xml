@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+<idinfo>
+<citation>
+<citeinfo>
+<origin>RI dept of economic development-tourism</origin>
+<origin>RIGIS</origin>
+<pubdate>19961201</pubdate>
+<title>Villages of Rhode Island; s44bvl96</title>
+<geoform>vector digital data</geoform>
+<pubinfo>
+<pubplace>Providence, Rhode Island</pubplace>
+<publish>RIGIS</publish>
+</pubinfo>
+<othercit>Suggested bibliographic reference: RIGIS, 1996. Villages of Rhode Island; s44bvl96. Rhode Island Geographic Information System (RIGIS) Data Distribution System, URL: http://www.rigis.org, Environmental Data Center, University of Rhode Island, Kingston, Rhode Island (last date accessed: 2 October 2014).</othercit>
+<onlink>http://www.rigis.org</onlink>
+<lworkcit>
+<citeinfo>
+<origin>RIGIS</origin>
+<pubdate>199612</pubdate>
+<title>RIGIS Database</title>
+<geoform>vector digital data</geoform>
+<onlink>http://www.rigis.org</onlink>
+</citeinfo>
+</lworkcit>
+</citeinfo>
+</citation>
+<descript>
+<abstract>Point locations of city town and village centers in Rhode Island with attribute names</abstract>
+<purpose>General mapping</purpose>
+</descript>
+<timeperd>
+<timeinfo>
+<sngdate>
+<caldate>1996</caldate>
+</sngdate>
+</timeinfo>
+<current>publication date</current>
+</timeperd>
+<status>
+<progress>Complete</progress>
+<update>None planned</update>
+</status>
+<spdom>
+<bounding>
+<westbc>-71.876079</westbc>
+<eastbc>-71.126400</eastbc>
+<northbc>42.034273</northbc>
+<southbc>41.173078</southbc>
+</bounding>
+</spdom>
+<keywords>
+<theme>
+<themekt>ISO 19115 Topic Category</themekt>
+<themekey>location</themekey>
+</theme>
+<theme>
+<themekt>None</themekt>
+<themekey>City</themekey>
+<themekey>Town</themekey>
+<themekey>Village</themekey>
+<themekey>Place Names</themekey>
+</theme>
+<place>
+<placekt>GNIS</placekt>
+<placekey>United States</placekey>
+<placekey>Rhode Island</placekey>
+<placekey>northeast</placekey>
+<placekey>New England</placekey>
+</place>
+</keywords>
+<accconst>None.</accconst>
+<useconst>
+This dataset is provided 'as is.’  The producer(s) of this dataset, contributors to this dataset, the Rhode Island Geographic Information System (RIGIS) consortium, the State of Rhode Island, and the University of Rhode Island do not make any warranties of any kind for this dataset, and are not liable for any loss or damage however and whenever caused by any use of this dataset.
+Please acknowledge both RIGIS and the primary producer(s) of this dataset in any derived products.  Versions of the RIGIS logo suitable for both printed and web-based products are available at http://www.rigis.org/logos.
+</useconst>
+<ptcontac>
+<cntinfo>
+<cntorgp>
+<cntorg>Rhode Island Division of Planning</cntorg>
+<cntper>Shane White</cntper>
+</cntorgp>
+<cntpos>RIGIS Coordinator</cntpos>
+<cntaddr>
+<addrtype>mailing and physical address</addrtype>
+<address>One Capitol Hill</address>
+<city>Providence</city>
+<state>RI</state>
+<postal>02908-5872</postal>
+</cntaddr>
+<cntvoice>401-222-6483</cntvoice>
+<cntemail>shane.white@doa.ri.gov</cntemail>
+</cntinfo>
+</ptcontac>
+<datacred>RIDOT; RIGIS</datacred>
+<native>Microsoft Windows XP Version 5.1 (Build 2600) Service Pack 3; ESRI ArcCatalog 9.3.0.1770</native>
+</idinfo>
+<dataqual>
+<attracc>
+<attraccr>RIGIS standards 99 percent; comparison with source1</attraccr>
+</attracc>
+<logic>visual inspect of pt overlay source2 and source1</logic>
+<complete>
+RIGIS standards - fuzzy-1.219
+topologically complete arc-info point coverage
+</complete>
+<posacc>
+<horizpa>
+<horizpar>approximate-estimate plus or minus 1000 feet;</horizpar>
+</horizpa>
+</posacc>
+<lineage>
+<srcinfo>
+<srccite>
+<citeinfo>
+<origin>RI Dept of economic development-tourism</origin>
+<pubdate>1997</pubdate>
+<title>RI visitor map -1997</title>
+</citeinfo>
+</srccite>
+<srcscale>110000 -approximate</srcscale>
+<typesrc>Map</typesrc>
+<srctime>
+<timeinfo>
+<sngdate>
+<caldate>1996</caldate>
+</sngdate>
+</timeinfo>
+<srccurr>publication date</srccurr>
+</srctime>
+<srccitea>RIDOT</srccitea>
+<srccontr>
+Provided Map
+RI 1996-1997 highway map
+</srccontr>
+</srcinfo>
+<procstep>
+<procdesc>
+SOURCE-ORIG1    =ri visitor map -1997
+SOURCE-ORIG2    =rigis-ridot roads - s44trd95
+Point locations for town and villages from source 1 were poistioned on road intersections on source 2 with arcedit with name attrributes from source 1.
+</procdesc>
+<srcused>E:\Projects\Metadata\RIGIS_template.xml</srcused>
+<procdate>1996</procdate>
+</procstep>
+<procstep>
+<procdesc>Updated Point of Contact information for this dataset from "RIGIS Coordinator" to "Shane White."</procdesc>
+<procdate>20150601</procdate>
+<proccont>
+<cntinfo>
+<cntorgp>
+<cntorg>University of Rhode Island Environmental Data Center</cntorg>
+<cntper>Erica Tefft</cntper>
+</cntorgp>
+<cntpos>Research Associate</cntpos>
+<cntaddr>
+<addrtype>mailing and physical address</addrtype>
+<address>Coastal Institute</address>
+<address>1 Greenhouse Road</address>
+<city>Kingston</city>
+<state>RI</state>
+<postal>02881</postal>
+</cntaddr>
+<cntvoice>401-874-5054</cntvoice>
+<cntemail>erica@edc.uri.edu</cntemail>
+</cntinfo>
+</proccont>
+</procstep>
+</lineage>
+</dataqual>
+<spdoinfo>
+<direct>Vector</direct>
+<ptvctinf>
+<sdtsterm>
+<sdtstype>Entity point</sdtstype>
+<ptvctcnt>212</ptvctcnt>
+</sdtsterm>
+<sdtsterm>
+<sdtstype>Point</sdtstype>
+<ptvctcnt>157</ptvctcnt>
+</sdtsterm>
+</ptvctinf>
+</spdoinfo>
+<spref>
+<horizsys>
+<planar>
+<gridsys>
+<gridsysn>State Plane Coordinate System</gridsysn>
+<spcs>
+<spcszone>3800</spcszone>
+<transmer>
+<sfctrmer>0.999994</sfctrmer>
+<longcm>-71.500000</longcm>
+<latprjo>41.083333</latprjo>
+<feast>328083.333333</feast>
+<fnorth>0.000000</fnorth>
+</transmer>
+</spcs>
+</gridsys>
+<planci>
+<plance>coordinate pair</plance>
+<coordrep>
+<absres>0.000512</absres>
+<ordres>0.000512</ordres>
+</coordrep>
+<plandu>survey feet</plandu>
+</planci>
+</planar>
+<geodetic>
+<horizdn>North American Datum of 1983</horizdn>
+<ellips>Geodetic Reference System 80</ellips>
+<semiaxis>6378137.000000</semiaxis>
+<denflat>298.257222</denflat>
+</geodetic>
+</horizsys>
+<vertdef>
+<altsys>
+<altres>0.000010</altres>
+<altenc>Explicit elevation coordinate included with horizontal coordinates</altenc>
+</altsys>
+</vertdef>
+</spref>
+<eainfo>
+<detailed>
+<enttyp>
+<enttypl>Villages</enttypl>
+</enttyp>
+<attr>
+<attrlabl>Shape</attrlabl>
+<attrdef>Feature geometry.</attrdef>
+<attrdefs>ESRI</attrdefs>
+<attrdomv>
+<udom>Coordinates defining the features.</udom>
+</attrdomv>
+</attr>
+<attr>
+<attrlabl>NAME</attrlabl>
+<attrdef>village or town name</attrdef>
+<attrdefs>ri dept of economic development-tourism</attrdefs>
+<attrdomv>
+<udom>names</udom>
+</attrdomv>
+</attr>
+<attr>
+<attrlabl>GlobalID</attrlabl>
+</attr>
+<attr>
+<attrlabl>OBJECTID</attrlabl>
+<attrdef>Internal feature number.</attrdef>
+<attrdefs>ESRI</attrdefs>
+<attrdomv>
+<udom>Sequential unique whole numbers that are automatically generated.</udom>
+</attrdomv>
+</attr>
+</detailed>
+</eainfo>
+<distinfo>
+<distrib>
+<cntinfo>
+<cntorgp>
+<cntorg>University of Rhode Island Environmental Data Center</cntorg>
+<cntper>Erica Tefft</cntper>
+</cntorgp>
+<cntaddr>
+<addrtype>mailing and physical</addrtype>
+<address>1 Greenhouse Road</address>
+<city>Kingston</city>
+<state>RI</state>
+<postal>02881</postal>
+</cntaddr>
+<cntvoice>401-874-5054</cntvoice>
+<cntemail>erica@edc.uri.edu</cntemail>
+<cntinst>email preferred</cntinst>
+</cntinfo>
+</distrib>
+<distliab>This dataset is provided 'as is.'  The producer(s) of this dataset, contributors to this dataset, the Rhode Island Geographic Information System (RIGIS) consortium, the State of Rhode Island, and the University of Rhode Island do not make any warranties of any kind for this dataset, and are not liable for any loss or damage however and whenever caused by any use of this dataset.</distliab>
+<stdorder>
+<digform>
+<digtinfo>
+<formname>Esri shapefile</formname>
+<filedec>ZIP</filedec>
+</digtinfo>
+<digtopt>
+<onlinopt>
+<computer>
+<networka>
+<networkr>http://www.rigis.org</networkr>
+</networka>
+</computer>
+</onlinopt>
+</digtopt>
+</digform>
+<fees>No fee for downloading directly from the RIGIS Data Distribution System located at http://www.rigis.org.</fees>
+</stdorder>
+</distinfo>
+<metainfo>
+<metd>20070628</metd>
+<metc>
+<cntinfo>
+<cntorgp>
+<cntorg>RI Department of Administration; Division of Information Technology</cntorg>
+<cntper>N/A</cntper>
+</cntorgp>
+<cntpos>RIGIS Coordinator</cntpos>
+<cntaddr>
+<addrtype>mailing address</addrtype>
+<address>1 Capitol Hill</address>
+<city>Providence</city>
+<state>Rhode Island</state>
+<postal>02908</postal>
+<country>USA</country>
+</cntaddr>
+<cntvoice>401-222-6483</cntvoice>
+<cntfax>401-222-6482</cntfax>
+<cntemail>rigis@admin.ri.gov</cntemail>
+<hours>8:00 - 3:30</hours>
+<cntinst>E-mail preferred</cntinst>
+</cntinfo>
+</metc>
+<metstdn>FGDC Content Standards for Digital Geospatial Metadata</metstdn>
+<metstdv>FGDC-STD-001-1998</metstdv>
+<mettc>local time</mettc>
+<metextns>
+<onlink>http://www.esri.com/metadata/esriprof80.html</onlink>
+<metprof>ESRI Metadata Profile</metprof>
+</metextns>
+</metainfo>
+</metadata>
