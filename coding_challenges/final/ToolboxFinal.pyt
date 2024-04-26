@@ -60,6 +60,7 @@ class Buffer(object):
                               out_feature_class=output,
                               buffer_distance_or_field=buffer_distance)
         return
+print("Buffer Output Complete")
 
 # this tool is allowing the merging of the road file and the towns of Rhode Island
 class Merge(object):
@@ -98,10 +99,15 @@ class Merge(object):
         input_features = parameters[0].valueAsText
         output = parameters[1].valueAsText
 
+        # Check that inputs are shapefiles - arcpy.Describe..
+        # if(filetype == "Shapefile"):
+        # if not then exit
+        # add some arcpy.AddMessages
+
         arcpy.Merge_management(inputs=input_features,
                                 output=output)
         return
-
+print("Merging of Road and Town in Rhode Island Complete")
 
 class Copy(object):
     def __init__(self):
@@ -141,7 +147,7 @@ class Copy(object):
         arcpy.CopyFeatures_management(in_features=input_features,
                                       out_feature_class=output_folder)
         return
-
+print("Copy Complete")
 
 # # This code block allows you to run your code in a test-mode within PyCharm.
 # def main():
