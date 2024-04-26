@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?><messages><msg code="0" type="2">Start Time: Friday, April 26, 2024 2:13:37 PM</msg><msg code="1" type="100">Traceback (most recent call last):
+  File "&lt;string&gt;", line 101, in execute
+  File "C:\Program Files\ArcGIS\Pro\Resources\ArcPy\arcpy\management.py", line 7215, in Merge
+    raise e
+  File "C:\Program Files\ArcGIS\Pro\Resources\ArcPy\arcpy\management.py", line 7212, in Merge
+    retval = convertArcObjectToPythonObject(gp.Merge_management(*gp_fixargs((inputs, output, field_mappings, add_source), True)))
+  File "C:\Program Files\ArcGIS\Pro\Resources\ArcPy\arcpy\geoprocessing\_base.py", line 520, in &lt;lambda&gt;
+    return lambda *args: val(*gp_fixargs(args, True))
+arcgisscripting.ExecuteError: Failed to execute. Parameters are not valid.
+ERROR 002948: The shape type of C:\Users\mmilander\OneDrive - University of Rhode Island\NRS 528\githubrepository\coding_challenges\final\towns.shp is not the same as that of previously entered datasets.
+Failed to execute (Merge).
+
+</msg><msg code="-2147467259" type="100">Failed to execute (Merge).</msg><msg code="0" type="3">Failed at Friday, April 26, 2024 2:13:37 PM (Elapsed Time: 0.13 seconds)</msg></messages>

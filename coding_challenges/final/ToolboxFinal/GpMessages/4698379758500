@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?><messages><msg code="0" type="2">Start Time: Friday, April 26, 2024 2:11:24 PM</msg><msg code="1" type="100">Traceback (most recent call last):
+  File "&lt;string&gt;", line 101, in execute
+  File "C:\Program Files\ArcGIS\Pro\Resources\ArcPy\arcpy\management.py", line 7215, in Merge
+    raise e
+  File "C:\Program Files\ArcGIS\Pro\Resources\ArcPy\arcpy\management.py", line 7212, in Merge
+    retval = convertArcObjectToPythonObject(gp.Merge_management(*gp_fixargs((inputs, output, field_mappings, add_source), True)))
+  File "C:\Program Files\ArcGIS\Pro\Resources\ArcPy\arcpy\geoprocessing\_base.py", line 520, in &lt;lambda&gt;
+    return lambda *args: val(*gp_fixargs(args, True))
+arcgisscripting.ExecuteError: ERROR 999999: Something unexpected caused the tool to fail. Contact Esri Technical Support (http://esriurl.com/support) to Report a Bug, and refer to the error help for potential solutions or workarounds.
+Failed to execute (Merge).
+
+</msg><msg code="-2147467259" type="100">Failed to execute (Merge).</msg><msg code="0" type="3">Failed at Friday, April 26, 2024 2:11:24 PM (Elapsed Time: 0.10 seconds)</msg></messages>
