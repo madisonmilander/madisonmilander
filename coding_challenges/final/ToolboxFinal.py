@@ -92,6 +92,11 @@ class Merge(object):
         input_features = parameters[0].valueAsText
         output = parameters[1].valueAsText
 
+        # Check that inputs are shapefiles - arcpy.Describe..
+        # if(filetype == "Shapefile"):
+        # if not then exit
+        # add some arcpy.AddMessages
+
         arcpy.Merge_management(inputs=input_features,
                                 output=output)
         return
