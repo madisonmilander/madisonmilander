@@ -146,8 +146,10 @@ class Copy(object):
 
         arcpy.CopyFeatures_management(in_features=input_features,
                                       out_feature_class=output_folder)
+
+        arcpy.AddMessage("Copy Complete")
         return
-print("Copy Complete")
+
 
 # # This code block allows you to run your code in a test-mode within PyCharm.
 # def main():
