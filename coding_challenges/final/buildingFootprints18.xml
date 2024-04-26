@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?><metadata><idinfo><citation><citeinfo><pubdate>201806</pubdate><title>Building Footprints; buildingFootprints18</title><geoform>vector digital data</geoform><pubinfo><publish>Microsoft</publish></pubinfo><othercit>Suggested bibliographic reference: RIGIS, 2018. Building Footprints; buildingFootprints18. Rhode Island Geographic Information System (RIGIS) Data Distribution System, URL: http://www.rigis.org, Environmental Data Center, University of Rhode Island, Kingston, Rhode Island (last date accessed: 9 August 2018).</othercit><onlink>http://www.rigis.org</onlink><lworkcit><citeinfo><origin>Rhode Island Geographic Information System (RIGIS)</origin><pubdate>1993</pubdate><title>Rhode Island Geographic Information System (RIGIS) Data Distribution System</title><onlink>http://www.rigis.org</onlink></citeinfo></lworkcit></citeinfo></citation><descript><abstract>Representative, computer generated building footprints for Rhode Island.  Originally developed by Microsoft, these data were released by Microsoft as open source data in June 2018.</abstract><purpose>Representative building footprints appropriate for use as general reference.  This not a comprehensive dataset representing all structures in Rhode Island.</purpose><supplinf>Source for the following text excerpts: Microsoft, 2018. USBuildingFootprints. URL: https://github.com/Microsoft/USBuildingFootprints (last date accessed: 9 August 2018).
+
+"The building extraction is done in two stages:
+1) Semantic Segmentation – Recognizing building pixels on the aerial image using DNNs
+2) Polygonization – Converting building pixel blobs into polygons
+
+First Stage - Semantic Segmentation
+
+DNN architecture
+The network foundation is ResNet34 which can be found here (https://github.com/Microsoft/CNTK/blob/master/PretrainedModels/Image.md#resnet). In order to produce pixel prediction output, we have appended RefineNet upsampling layers described in this paper (https://arxiv.org/abs/1611.06612). The model is fully-convolutional, meaning that the model can be applied on an image of any size (constrained by GPU memory, 4096x4096 in our case).
+
+Training details
+The training set consists of 5 million labeled images. Majority of the satellite images cover diverse residential areas in US. For the sake of good set representation, we have enriched the set with samples from various areas covering mountains, glaciers, forests, deserts, beaches, coasts, etc. Images in the set are of 256x256 pixel size with 1 ft/pixel resolution. The training is done with CNTK toolkit using 32 GPUs.
+
+Metrics
+These are the intermediate stage metrics we use to track DNN model improvements and they are pixel based. The pixel error on the evaluation set is 1.15%. Pixel recall/precision = 94.5%/94.5%
+
+Second Stage - Polygonization
+
+Method description
+We developed a method that approximates the prediction pixels into polygons making decisions based on the whole prediction feature space. This is very different from standard approaches, e.g. Douglas-Peucker algorithm, which are greedy in nature. The method tries to impose some of a priory building properties, which are, at the moment, manually defined and automatically tuned. Some of these a priori properties are:
+
+The building edge must be of at least some length, both relative and absolute, e.g. 3 meters
+Consecutive edge angles are likely to be 90 degrees
+Consecutive angles cannot be very sharp, smaller by some auto-tuned threshold, e.g. 30 degrees
+Building angles likely have very few dominant angles, meaning all building edges are forming angle of (dominant angle ± nπ/2)
+In near future, we will be looking to deduce this automatically from existing building information.
+
+Metrics
+Building matching metrics:
+
+Metric	Value
+Precision 99.3%
+Recall	93.5%
+
+We track various metrics to measure the quality of the output:
+
+Intersection over Union – This is the standard metric measuring the overlap quality against the labels
+Shape distance – With this metric we measure the polygon outline similarity
+Dominant angle rotation error – This measures the polygon rotation deviation
+
+On our evaluation set contains ~15k building. The metrics on the set are:
+
+IoU is 0.85, Shape distance is 0.33, Average rotation error is 1.6 degrees
+The metrics are better or similar compared to OSM building metrics against the labels
+Data Vintage
+The vintage of the footprints depends on the vintage of the underlying imagery. Because Bing Imagery is a composite of multiple sources it is difficult to know the exact dates for individual pieces of data.
+
+How good are the data?
+Our metrics show that in the vast majority of cases the quality is at least as good as data hand digitized buildings in OpenStreetMap. It is not perfect, particularly in dense urban areas but it is still awesome."</supplinf></descript><timeperd><timeinfo><sngdate><caldate>unknown</caldate></sngdate></timeinfo><current>unknown</current></timeperd><status><progress>Complete</progress><update>None planned</update></status><spdom><bounding><westbc>-71.866359</westbc><eastbc>-71.118094</eastbc><northbc>42.018688</northbc><southbc>41.147218</southbc></bounding></spdom><keywords><theme><themekt>ISO 19115 Topic Category</themekt><themekey>structure</themekey></theme><theme><themekt>None</themekt><themekey>Microsoft</themekey><themekey>building</themekey><themekey>footprint</themekey><themekey>outline</themekey><themekey>structure</themekey></theme><place><placekt>none</placekt><placekey>USA</placekey><placekey>Rhode Island</placekey><placekey>Northeast</placekey><placekey>New England</placekey></place></keywords><accconst>None</accconst><useconst>This dataset is provided 'as is.’  The producer(s) of this dataset, contributors to this dataset, the Rhode Island Geographic Information System (RIGIS) consortium, the State of Rhode Island, and the University of Rhode Island do not make any warranties of any kind for this dataset, and are not liable for any loss or damage however and whenever caused by any use of this dataset.
+
+Please acknowledge both RIGIS and the primary producer(s) of this dataset in any derived products.  Versions of the RIGIS logo suitable for both printed and web-based products are available at http://www.rigis.org.</useconst><ptcontac><cntinfo><cntorgp><cntorg>University of Rhode Island Environmental Data Center</cntorg></cntorgp><cntpos>RIGIS Data Manager</cntpos><cntaddr><addrtype>mailing and physical</addrtype><address>1 Greenhouse Road</address><city>Kingston</city><state>RI</state><postal>02881</postal><country>USA</country></cntaddr><cntemail>rigis@uri.edu</cntemail></cntinfo></ptcontac><native>Version 6.2 (Build 9200) ; Esri ArcGIS 10.6.0.8321</native></idinfo><dataqual><attracc><attraccr>none</attraccr></attracc><logic>none</logic><complete>none</complete><posacc><horizpa><horizpar>none</horizpar></horizpa></posacc><lineage><srcinfo><srccite><citeinfo><origin>Microsoft</origin><geoform>vector digital data</geoform><onlink>https://github.com/Microsoft/USBuildingFootprints</onlink></citeinfo></srccite><srcscale>unknown</srcscale><typesrc>digital raster data</typesrc><srctime><timeinfo><sngdate><caldate>unknown</caldate></sngdate></timeinfo><srccurr>unknown</srccurr></srctime><srccitea>Microsoft building footprints</srccitea><srccontr>spatial and attribute data</srccontr></srcinfo><procstep><procdesc>Original Microsoft announcement regarding availability of these data:
+https://blogs.bing.com/maps/2018-06/microsoft-releases-125-million-building-footprints-in-the-us-as-open-data
+
+Download website:
+https://github.com/Microsoft/USBuildingFootprints
+
+Downloaded this specific file:
+https://usbuildingdata.blob.core.windows.net/usbuildings-v1-1/RhodeIsland.zip
+
+Opened the original source geojson file using QGIS version 3.2.0-Bonn, then exported to Esri shapefile format.  Using ArcGIS Desktop 10.6, re-projected the resulting shapefile to RI state plane (EPSG: 3438); used the "NAD_1983_To_WGS_1984_5" geographic transformation, did not select the "preserve shape" option.  Wrote metadata and made available for distribution via RIGIS.</procdesc><srcused></srcused><procdate>20180809</procdate><proccont><cntinfo><cntorgp><cntorg>University of Rhode Island Environmental Data Center</cntorg><cntper>Greg Bonynge</cntper></cntorgp><cntpos>Geospatial Extension Specialist</cntpos><cntaddr><addrtype>mailing and physical</addrtype><address>1 Greenhouse Road</address><city>Kingston</city><state>RI</state><postal>02881</postal><country>USA</country></cntaddr><cntvoice>401-874-2180</cntvoice><cntemail>greg@edc.uri.edu</cntemail><cntinst>email preferred</cntinst></cntinfo></proccont></procstep></lineage></dataqual><spdoinfo><direct>Vector</direct><ptvctinf><sdtsterm><sdtstype>GT-polygon composed of chains</sdtstype><ptvctcnt>366779</ptvctcnt></sdtsterm></ptvctinf></spdoinfo><spref><horizsys><planar><mapproj><mapprojn>NAD 1983 StatePlane Rhode Island FIPS 3800 Feet</mapprojn><transmer><sfctrmer>0.99999375</sfctrmer><longcm>-71.5</longcm><latprjo>41.08333333333334</latprjo><feast>328083.3333333333</feast><fnorth>0.0</fnorth></transmer></mapproj><planci><plance>coordinate pair</plance><coordrep><absres>0.000000007286382608384659</absres><ordres>0.000000007286382608384659</ordres></coordrep><plandu>foot_us</plandu></planci></planar><geodetic><horizdn>D North American 1983</horizdn><ellips>GRS 1980</ellips><semiaxis>6378137.0</semiaxis><denflat>298.257222101</denflat></geodetic></horizsys></spref><eainfo><overview><eaover>No attribute fields were provided by the originator of this dataset, Microsoft.  The remaining fields present in this dataset were generated automatically by QGIS and/or Esri ArcGIS Desktop.</eaover><eadetcit>none</eadetcit></overview></eainfo><distinfo><distrib><cntinfo><cntorgp><cntorg>University of Rhode Island Environmental Data Center</cntorg></cntorgp><cntpos>RIGIS Data Manager</cntpos><cntaddr><addrtype>mailing and physical</addrtype><address>1 Greenhouse Road</address><city>Kingston</city><state>RI</state><postal>02881</postal></cntaddr><cntemail>rigis@uri.edu</cntemail></cntinfo></distrib><distliab>This dataset is provided 'as is.'  The producer(s) of this dataset, contributors to this dataset, the Rhode Island Geographic Information System (RIGIS) consortium, the State of Rhode Island, and the University of Rhode Island do not make any warranties of any kind for this dataset, and are not liable for any loss or damage however and whenever caused by any use of this dataset.</distliab><stdorder><digform><digtinfo><formname>Esri shapefile</formname><filedec>ZIP</filedec></digtinfo><digtopt><onlinopt><computer><networka><networkr>http://www.rigis.org</networkr></networka></computer></onlinopt></digtopt></digform><fees>No fee for downloading directly from the RIGIS Data Distribution System located at http://www.rigis.org.</fees></stdorder></distinfo><metainfo><metd>20180809</metd><metc><cntinfo><cntorgp><cntorg>University of Rhode Island Environmental Data Center</cntorg></cntorgp><cntpos>RIGIS Data Manager</cntpos><cntaddr><addrtype>mailing and physical</addrtype><address>1 Greenhouse Road</address><city>Kingston</city><state>RI</state><postal>02881</postal></cntaddr><cntemail>rigis@uri.edu</cntemail></cntinfo></metc><metstdn>FGDC Content Standard for Digital Geospatial Metadata</metstdn><metstdv>FGDC-STD-001-1998</metstdv><mettc>local time</mettc></metainfo></metadata>
