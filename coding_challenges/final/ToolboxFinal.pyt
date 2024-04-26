@@ -59,8 +59,10 @@ class Buffer(object):
         arcpy.Buffer_analysis(in_features=input_features,
                               out_feature_class=output,
                               buffer_distance_or_field=buffer_distance)
+
+        arcpy.AddMessage("Buffer Output Complete")
         return
-print("Buffer Output Complete")
+
 
 # this tool is allowing the merging of the Building file and the towns of Rhode Island
 class Merge(object):
@@ -103,11 +105,23 @@ class Merge(object):
         # if(filetype == "Shapefile"):
         # if not then exit
         # add some arcpy.AddMessages
+        list_of_types = []
 
-        arcpy.Merge_management(inputs=input_features,
-                                output=output)
+        for file in input_features:
+            desc = arcpy.Describe(file)
+            list_of_types.append(desc['shapeType'])
+
+        # look and see if they are unique...
+        list_of_types = set(list_of_types)
+
+        if len(list_of_types) == 1:
+            arcpy.Merge_management(inputs=input_features,
+                                    output=output)
+            arcpy.AddMessage("Merging of Building and Town in Rhode Island Complete")
+        else:
+            arcpy.AddMessage("Cannot run tool need matching types of shapefile (i.e., points, lines or polygons)")
+
         return
-print("Merging of Building and Town in Rhode Island Complete")
 
 class Copy(object):
     def __init__(self):
@@ -146,8 +160,10 @@ class Copy(object):
 
         arcpy.CopyFeatures_management(in_features=input_features,
                                       out_feature_class=output_folder)
+
+        arcpy.AddMessage("Copy Complete")
         return
-print("Copy Complete")
+
 
 # # This code block allows you to run your code in a test-mode within PyCharm.
 # def main():
