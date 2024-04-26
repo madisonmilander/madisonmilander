@@ -2,7 +2,7 @@
 
 import arcpy
 
-# this toolbox will allow you to buffer, merge, and copy the shapefiles "RIDOTrds16.shp" and "towns.shp"
+# this toolbox will allow you to buffer, merge, and copy the shapefiles "buildingFootprints18.shp" and "towns.shp"
 
 class Toolbox(object):
     def __init__(self):
@@ -29,7 +29,7 @@ class Buffer(object):
                                          datatype="DEFeatureClass",
                                          parameterType="Required",
                                          direction="Input")
-        input_features.value = r"C:\Users\mmilander\OneDrive - University of Rhode Island\NRS 528\githubrepository\coding_challenges\final\RIDOTrds16.shp"
+        input_features.value = r"C:\Users\mmilander\OneDrive - University of Rhode Island\NRS 528\githubrepository\coding_challenges\final\buildingFootprints18.shp"
         params.append(input_features)
         buffer_distance = arcpy.Parameter(name="buffer_distance",
                                           displayName="Buffer Distance",
@@ -42,7 +42,7 @@ class Buffer(object):
                                  datatype="DEFeatureClass",
                                  parameterType="Required",
                                  direction="Output")
-        output.value = r"C:\Users\mmilander\OneDrive - University of Rhode Island\NRS 528\githubrepository\coding_challenges\final\road_buffer.shp"
+        output.value = r"C:\Users\mmilander\OneDrive - University of Rhode Island\NRS 528\githubrepository\coding_challenges\final\building_buffer.shp"
         params.append(output)
         return params
 
@@ -62,7 +62,7 @@ class Buffer(object):
         return
 print("Buffer Output Complete")
 
-# this tool is allowing the merging of the road file and the towns of Rhode Island
+# this tool is allowing the merging of the Building file and the towns of Rhode Island
 class Merge(object):
     def __init__(self):
         """Define the tool (tool name is the name of the class)."""
@@ -79,14 +79,14 @@ class Merge(object):
                                          parameterType="Required",
                                          direction="Input",
                                          multiValue=True)
-        input_features.values = [r"C:\Users\mmilander\OneDrive - University of Rhode Island\NRS 528\githubrepository\coding_challenges\final\RIDOTrds16.shp", r"C:\Users\mmilander\OneDrive - University of Rhode Island\NRS 528\githubrepository\coding_challenges\final\towns.shp"]
+        input_features.values = [r"C:\Users\mmilander\OneDrive - University of Rhode Island\NRS 528\githubrepository\coding_challenges\final\buildingFootprints18.shp", r"C:\Users\mmilander\OneDrive - University of Rhode Island\NRS 528\githubrepository\coding_challenges\final\towns.shp"]
         params.append(input_features)
         output = arcpy.Parameter(name="output",
                                  displayName="Output",
                                  datatype="DEFeatureClass",
                                  parameterType="Required",
                                  direction="Output")
-        output.value = r"C:\Users\mmilander\OneDrive - University of Rhode Island\NRS 528\githubrepository\coding_challenges\final\road_town_merge.shp"
+        output.value = r"C:\Users\mmilander\OneDrive - University of Rhode Island\NRS 528\githubrepository\coding_challenges\final\building_town_merge.shp"
         params.append(output)
         return params
 
@@ -107,7 +107,7 @@ class Merge(object):
         arcpy.Merge_management(inputs=input_features,
                                 output=output)
         return
-print("Merging of Road and Town in Rhode Island Complete")
+print("Merging of Building and Town in Rhode Island Complete")
 
 class Copy(object):
     def __init__(self):
@@ -124,7 +124,7 @@ class Copy(object):
                                          datatype="DEFeatureClass",
                                          parameterType="Required",
                                          direction="Input")
-        input_features.value = r"C:\Users\mmilander\OneDrive - University of Rhode Island\NRS 528\githubrepository\coding_challenges\final\RIDOTrds16.shp"
+        input_features.value = r"C:\Users\mmilander\OneDrive - University of Rhode Island\NRS 528\githubrepository\coding_challenges\final\buildingFootprints18.shp"
         params.append(input_features)
         output_folder = arcpy.Parameter(name="output_folder",
                                         displayName="Output Folder",
