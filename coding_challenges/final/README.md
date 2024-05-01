@@ -16,6 +16,7 @@ Add the Python Toolbox file (ToolboxFinal.pyt) to your project.
 Tools
 
 **1. Buffer**
+
 This tool creates a buffer around input features.
 
 *Input Features*: r"C:\Users\mmilander\OneDrive - University of Rhode Island\NRS 528\githubrepository\coding_challenges\final\buildingFootprints18.shp"
@@ -25,6 +26,7 @@ Buffer Distance: Enter the desired buffer distance.
 *Output*: r"C:\Users\mmilander\OneDrive - University of Rhode Island\NRS 528\githubrepository\coding_challenges\final\building_buffer.shp"
 
 **2. Merge**
+
 The Merge tool combines multiple feature classes into a single feature class.
 
 *Input Features*: [r"C:\Users\mmilander\OneDrive - University of Rhode Island\NRS 528\githubrepository\coding_challenges\final\buildingFootprints18.shp", r"C:\Users\mmilander\OneDrive - University of Rhode Island\NRS 528\githubrepository\coding_challenges\final\towns.shp"]
@@ -32,6 +34,7 @@ The Merge tool combines multiple feature classes into a single feature class.
 *Output*: r"C:\Users\mmilander\OneDrive - University of Rhode Island\NRS 528\githubrepository\coding_challenges\final\building_town_merge.shp"
 
 **3. Copy**
+
 Copy tool duplicates input features to a new location.
 
 *Input Features*: r"C:\Users\mmilander\OneDrive - University of Rhode Island\NRS 528\githubrepository\coding_challenges\final\buildingFootprints18.shp"
