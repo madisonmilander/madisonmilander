@@ -1,26 +1,11 @@
-﻿OBJECTID,CC_5____Sheet1,Field2,Field3
-,scientificName1,decimalLongitude,decimalLatitude
-,Orcinus orca,13.6,67.82
-,Orcinus orca,-179.3693,62.2688
-,Orcinus orca,-147,60.3
-,Orcinus orca,166.1405,54.9648
-,Orcinus orca,-147,60.3
-,Orcinus orca,30.37,70.68
-,Orcinus orca,3.02,60
-,Orcinus orca,51.8726,-46.4234
-,Orcinus orca,-147,60.3
-,Orcinus orca,-147,60.3
-,,,
-,,,
-,,,
-,scientificName2,decimalLongitude,decimalLatitude
-,Carcharodon carcharias,152.26,-32.61
-,Carcharodon carcharias,151.38,-33.95
-,Carcharodon carcharias,152.31,-32.57
-,Carcharodon carcharias,150.17,-36.26
-,Carcharodon carcharias,150.21,-36.26
-,Carcharodon carcharias,153.6,-28.9
-,Carcharodon carcharias,153.18,-30.21
-,Carcharodon carcharias,151.37,-33.94
-,Carcharodon carcharias,150.17,-36.26
-,Carcharodon carcharias,151.783,-32.583
+decimalLongitude,decimalLatitude
+13.6,67.82
+-179.3693,62.2688
+-147,60.3
+166.1405,54.9648
+-147,60.3
+30.37,70.68
+3.02,60
+51.8726,-46.4234
+-147,60.3
+-147,60.3

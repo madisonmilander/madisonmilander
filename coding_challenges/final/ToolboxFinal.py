@@ -1,17 +1,18 @@
-# this is for the final toolbox challenge
-
 import arcpy
+import os
+
 
 # this toolbox will allow you to buffer, merge, and copy the shapefiles "buildingFootprints18.shp" and "towns.shp"
 
 class Toolbox(object):
     def __init__(self):
         """Define the toolbox (the name of the toolbox is the name of the .pyt file)."""
-        self.label = "ToolboxFinal"
+        self.label = "Town and Building's of Rhode Island Toolbox"
         self.alias = "Toolbox"
 
         # List of tool classes associated with this toolbox
         self.tools = [Buffer, Merge, Copy]
+
 
 # The buffer class is buffering the roads
 class Buffer(object):
@@ -29,7 +30,8 @@ class Buffer(object):
                                          datatype="DEFeatureClass",
                                          parameterType="Required",
                                          direction="Input")
-        input_features.value = r"C:\Users\mmilander\OneDrive - University of Rhode Island\NRS 528\githubrepository\coding_challenges\final\buildingFootprints18.shp"
+        arcpy.Describe(
+            r"C:\Users\mmilander\OneDrive - University of Rhode Island\NRS 528\githubrepository\coding_challenges\final\buildingFootprints18.shp")
         params.append(input_features)
         buffer_distance = arcpy.Parameter(name="buffer_distance",
                                           displayName="Buffer Distance",
@@ -59,8 +61,9 @@ class Buffer(object):
         arcpy.Buffer_analysis(in_features=input_features,
                               out_feature_class=output,
                               buffer_distance_or_field=buffer_distance)
+        arcpy.AddMessage("Buffer Complete")
         return
-print("Buffer Output Complete")
+
 
 # this tool is allowing the merging of the Building file and the towns of Rhode Island
 class Merge(object):
@@ -79,7 +82,9 @@ class Merge(object):
                                          parameterType="Required",
                                          direction="Input",
                                          multiValue=True)
-        input_features.values = [r"C:\Users\mmilander\OneDrive - University of Rhode Island\NRS 528\githubrepository\coding_challenges\final\buildingFootprints18.shp", r"C:\Users\mmilander\OneDrive - University of Rhode Island\NRS 528\githubrepository\coding_challenges\final\towns.shp"]
+        arcpy.Describe(
+            r"C:\Users\mmilander\OneDrive - University of Rhode Island\NRS 528\githubrepository\coding_challenges\final\buildingFootprints18.shp",
+            r"C:\Users\mmilander\OneDrive - University of Rhode Island\NRS 528\githubrepository\coding_challenges\final\towns.shp")
         params.append(input_features)
         output = arcpy.Parameter(name="output",
                                  displayName="Output",
@@ -99,15 +104,11 @@ class Merge(object):
         input_features = parameters[0].valueAsText
         output = parameters[1].valueAsText
 
-        # Check that inputs are shapefiles - arcpy.Describe..
-        # if(filetype == "Shapefile"):
-        # if not then exit
-        # add some arcpy.AddMessages
-
         arcpy.Merge_management(inputs=input_features,
-                                output=output)
+                               output=output)
+        arcpy.AddMessage("Merging of Building and Town in Rhode Island Complete")
         return
-print("Merging of Building and Town in Rhode Island Complete")
+
 
 class Copy(object):
     def __init__(self):
@@ -124,7 +125,8 @@ class Copy(object):
                                          datatype="DEFeatureClass",
                                          parameterType="Required",
                                          direction="Input")
-        input_features.value = r"C:\Users\mmilander\OneDrive - University of Rhode Island\NRS 528\githubrepository\coding_challenges\final\buildingFootprints18.shp"
+        arcpy.Describe(
+            r"C:\Users\mmilander\OneDrive - University of Rhode Island\NRS 528\githubrepository\coding_challenges\final\buildingFootprints18.shp")
         params.append(input_features)
         output_folder = arcpy.Parameter(name="output_folder",
                                         displayName="Output Folder",
@@ -146,15 +148,51 @@ class Copy(object):
 
         arcpy.CopyFeatures_management(in_features=input_features,
                                       out_feature_class=output_folder)
+<<<<<<< Updated upstream
+
+        arcpy.AddMessage("Copy Complete")
+        return
+
+=======
+>>>>>>> Stashed changes
 
         arcpy.AddMessage("Copy Complete")
         return
 
 
-# # This code block allows you to run your code in a test-mode within PyCharm.
-# def main():
-#     tool = Buffer()  # Choose the tool you want to test
-#     tool.execute(tool.getParameterInfo(), None)
-#
-# if __name__ == '__main__':
-#     main()
+
+def main():
+    # Create instances of the tools
+    buffer_tool = Buffer()
+    merge_tool = Merge()
+    copy_tool = Copy()
+
+    # Get parameter information for the Buffer tool
+    buffer_params = buffer_tool.getParameterInfo()
+    merge_params = merge_tool.getParameterInfo()
+    copy_params = copy_tool.getParameterInfo()
+
+    # Set parameters for Buffer tool
+    buffer_params[0].value = r"C:\Users\mmilander\OneDrive - University of Rhode Island\NRS 528\githubrepository\coding_challenges\final\buildingFootprints18.shp"
+    buffer_params[1].value = 100
+    buffer_output_path = buffer_params[2].value
+    if arcpy.Exists(buffer_output_path):
+        arcpy.Delete_management(buffer_output_path)
+
+    # Execute the Buffer tool
+    buffer_tool.execute(buffer_params, None)
+
+    # Set parameters for Merge tool
+    merge_params[0].values = [r"C:\Users\mmilander\OneDrive - University of Rhode Island\NRS 528\githubrepository\coding_challenges\final\buildingFootprints18.shp", r"C:\Users\mmilander\OneDrive - University of Rhode Island\NRS 528\githubrepository\coding_challenges\final\towns.shp"]
+    merge_output_path = merge_params[1].value
+    if arcpy.Exists(merge_output_path):
+        arcpy.Delete_management(merge_output_path)
+
+    # Execute the Merge tool
+    merge_tool.execute(merge_params, None)
+
+
+
+if __name__ == '__main__':
+    main()
+

@@ -1,8 +1,7 @@
-# coding challenge 9
 import arcpy
 
 # Define the input shapefile
-input_shapefile = "C:\Users\mmilander\OneDrive - University of Rhode Island\NRS 528\githubrepository\coding_challenges\coding_challenge_9\RI_Forest_Health_Works_Project%3A_Points_All_Invasives.shp"
+input_shapefile = r"C:\Users\mmilander\OneDrive - University of Rhode Island\NRS 528\githubrepository\coding_challenges\coding_challenge_9\RI_Forest_Health_Works_Project%3A_Points_All_Invasives.shp"
 
 # Define the field names
 photo_field = "PHOTO"
@@ -16,8 +15,11 @@ records_without_photos = []
 count_with_photos = 0
 count_without_photos = 0
 
+# Set workspace
+arcpy.env.workspace = r"C:\output\directory"
+
 # Iterate through the input shapefile
-with arcpy.da.SearchCursor(input_shapefile, [photo_field, species_field, "SHAPE@"]) as cursor:
+with arcpy.da.SearchCursor(input_shapefile, [photo_field, species_field]) as cursor:
     for row in cursor:
         # Check if the record has a photo
         if row[0]:
@@ -38,9 +40,6 @@ output_without_photos = "Sites_Without_Photos.shp"
 # Use the first row's spatial reference for output shapefiles
 spatial_ref = arcpy.Describe(input_shapefile).spatialReference
 
-# Define the output directory
-output_dir = arcpy.env.workspace
-
 # Delete output shapefiles if they already exist
 for output_shapefile in [output_with_photos, output_without_photos]:
     if arcpy.Exists(output_shapefile):
@@ -48,8 +47,8 @@ for output_shapefile in [output_with_photos, output_without_photos]:
 
 # Create output shapefiles
 try:
-    arcpy.CreateFeatureclass_management(output_dir, output_with_photos, "POINT", spatial_reference=spatial_ref)
-    arcpy.CreateFeatureclass_management(output_dir, output_without_photos, "POINT", spatial_reference=spatial_ref)
+    arcpy.CreateFeatureclass_management(arcpy.env.workspace, output_with_photos, "POINT", spatial_reference=spatial_ref)
+    arcpy.CreateFeatureclass_management(arcpy.env.workspace, output_without_photos, "POINT", spatial_reference=spatial_ref)
 except arcpy.ExecuteError:
     print(arcpy.GetMessages(2))  # Print any error messages
 except Exception as e:
